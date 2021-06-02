@@ -42,6 +42,7 @@ body {
 	/* background-color: lightseagreen; */
 	/* width: 50%; */
 }
+
 .imgandspec {
 	box-shadow: #64646f33 0px 7px 29px 0px;
 	border: 0.5px solid lightseagreen;
@@ -114,11 +115,18 @@ tr:last-child {
 	display: flex;
 	width: 50%;
 	height: 2.5rem;
-	gap: 4%;
+	/* gap: 4%; */
+	/* justify-content: space-between; */
 	/* border: 1px solid red; */
 }
 .buylinkbutton ul li {
 	width: 30%;
+	/* flex: 1; */
+	/* border: 1px solid red; */
+	margin-left: 1.3rem;
+}
+.buylinkbutton ul li:first-child {
+	margin-left: 0px;
 }
 .buylinkbutton ul li a {
 	display: flex;
@@ -155,7 +163,8 @@ tr:last-child {
 }
 .content .discription .prosAndCons {
 	display: flex;
-	gap: 2rem;
+	/* gap: 10rem; */
+
 	margin-top: 1rem;
 	font-size: medium;
 }
@@ -171,18 +180,26 @@ tr:last-child {
 	color: lightseagreen;
 	padding-right: 0.5rem;
 }
+
 .content .discription .prosAndCons .consUl > li::before {
 	content: "\2A09";
 	color: #e76f51;
 	padding-right: 0.5rem;
 }
-
+@media (min-width: 1024px) {
+	.content .discription .prosAndCons .cons {
+		margin-left: 5rem;
+	}
+}
 @media (max-width: 1024px) {
 	.content {
 		width: 75%;
 	}
-	.content .discription .prosAndCons {
+	/* .content .discription .prosAndCons {
 		gap: 1rem;
+	} */
+	.content .discription .prosAndCons .cons {
+		margin-left: 5rem;
 	}
 }
 @media (max-width: 768px) {
@@ -190,16 +207,19 @@ tr:last-child {
 		width: 85%;
 	}
 	.pdspec {
-		width: 100%;
+		width: 93%;
 	}
 	.content .discription .prosAndCons {
 		flex-direction: column;
+	}
+	.content .discription .prosAndCons .cons {
+		margin-left: 0rem;
 	}
 }
 @media (max-width: 661px) {
 	.pdspec h3,
 	.pdspec .spectable {
-		width: 100%;
+		width: 93%;
 	}
 	.imgandspec {
 		flex-direction: column;
@@ -218,10 +238,19 @@ tr:last-child {
 	.content .discription .prosAndCons h3 {
 		margin-left: 0rem;
 		/* marginleft: 1rem;
-		padding-right: 0.5rem; */
+		pad
+		ding-right: 0.5rem; */
 	}
+	/* .content .discription {
+		line-height: 2.2;
+		word-spacing: 0.15rem;
+	} */
 }
 @media (max-width: 540px) {
+	.pdname > h2 {
+		font-size: 1.3rem;
+	}
+
 	.imgandspec {
 		flex-direction: column;
 		border: none;
@@ -229,4 +258,13 @@ tr:last-child {
 	.buylinkbutton ul {
 		width: 100%;
 	}
+	.content .discription {
+		font-size: medium;
+		line-height: 1.8;
+		word-spacing: 0.15rem;
+		/* line-height: 1.5; */
+	}
 }
+/* @media (max-width: 320px){
+
+} */
