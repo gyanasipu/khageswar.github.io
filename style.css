@@ -223,7 +223,7 @@ margin-left: 1rem;
 	transition: border 0.2s ease-in-out;
 }
 #myBtn > img {
-	height: 50%;
+	height: 48%;
 	object-fit: contain;
 	pointer-events: none;
 }
@@ -262,6 +262,10 @@ margin-left: 1rem;
 		margin-left: 0rem;
 		margin-top: 0.8rem;
 	}
+	#myBtn {
+		bottom: 35px;
+		right: 35px;
+	}
 }
 @media (max-width: 661px) {
 	.pdspec h3,
@@ -294,6 +298,10 @@ margin-left: 1rem;
 		line-height: 2.2;
 		word-spacing: 0.15rem;
 	} */
+	#myBtn {
+		bottom: 30px;
+		right: 30px;
+	}
 }
 @media (max-width: 540px) {
 	.pdname > h2 {
@@ -324,6 +332,10 @@ margin-left: 1rem;
 	.content .discription .prosAndCons .cons {
 		/* border: 1px solid red; */
 		margin-top: 1rem;
+	}
+	#myBtn {
+		bottom: 20px;
+		right: 20px;
 	}
 }
 /* @media (max-width: 320px){
