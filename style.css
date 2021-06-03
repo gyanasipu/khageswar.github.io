@@ -218,7 +218,8 @@ margin-left: 1rem;
 	width: 50px;
 	border-radius: 50%;
 	font-size: 18px;
-	box-shadow: #00000059 0px 5px 15px;
+	background-color: #ffffff;
+	box-shadow: 0 1px 2px 0 rgb(60 64 67 / 30%), 0 2px 6px 2px rgb(60 64 67 / 15%);
 	transition: border 0.2s ease-in-out;
 }
 #myBtn > img {
@@ -228,7 +229,8 @@ margin-left: 1rem;
 }
 
 #myBtn:hover {
-	border: 1px solid #5f6368;
+	box-shadow: 0 3px 5px -1px rgb(0 0 0 / 20%), 0 6px 10px 0 rgb(0 0 0 / 14%),
+		0 1px 18px 0 rgb(0 0 0 / 12%);
 }
 @media (min-width: 1024px) {
 	.content .discription .prosAndCons .cons {
@@ -327,4 +329,3 @@ margin-left: 1rem;
 /* @media (max-width: 320px){
 
 } */
-
