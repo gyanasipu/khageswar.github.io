@@ -1,1 +1,330 @@
-*{margin:0;padding:0;box-sizing:border-box}a,li,ul{list-style:none;text-decoration:none;color:#fff}li{color:#000}body{color:#050505;font-family:"Open Sans",sans-serif;line-height:1.5;border-top:3px solid #20b2aa}section{margin-top:.5rem}.content{width:60%;margin:auto;margin-bottom:2.5rem}.content::after{display:block;content:"";border-top:1px dotted #797979b9;width:100%;margin-top:2.5rem;height:1px}.content .pdname{margin-bottom:.6rem}.imgandspec{box-shadow:#64646f33 0 7px 29px 0;border:.5px solid #20b2aa;border-radius:.5rem;display:flex;justify-content:space-between;align-items:center}.pdimg{display:flex;justify-content:center;align-items:center;height:100%;width:100%}.pdimg img{height:250px;object-fit:contain}.pdspec{width:100%;height:300px;display:flex;flex-direction:column;justify-content:center}.pdspec h3{padding-left:.3rem;width:95%;font-weight:400;text-decoration:underline #20b2aa}.pdspec .spectable{height:80%;width:95%;border-collapse:collapse}td{padding:0 .3rem 0 .3rem}tr{border-bottom:.5px solid #20b2aa}tr:last-child{border:none}.buylinkbutton{margin-top:1rem}.buylinkbutton h4{font-weight:400;margin-bottom:1rem}.buylinkbutton ul{display:flex;width:50%;height:2.5rem}.buylinkbutton ul li{width:30%;margin-left:1.3rem}.buylinkbutton ul li:first-child{margin-left:0}.buylinkbutton ul li a{display:flex;border-radius:.3rem;justify-content:center;align-items:center;width:100%;height:100%;background-color:#20b2aa;box-shadow:rgba(0,0,0,.24) 0 3px 8px;border:1px solid transparent;transition:all .2s ease-in-out}.buylinkbutton ul li a:hover{background-color:#fff;border:1px solid #20b2aa;color:#20b2aa}.content .discription{margin-top:1.5rem;font-size:medium;line-height:2.2;word-spacing:.15rem}.content .discription p{margin-bottom:2rem}.content .discription p>a{color:#000;text-decoration:underline}.content .discription .prosAndCons{display:flex;margin-top:1rem;font-size:medium}.content .discription .prosAndCons h3::before{content:"\25CF";color:inherit;padding-right:.5rem}.content .discription .prosAndCons .prosUl>li::before{content:"\2714";color:#20b2aa;padding-right:.5rem}.content .discription .prosAndCons .consUl>li::before{content:"\2A09";color:#e76f51;padding-right:.5rem}@media (min-width:1024px){.content .discription .prosAndCons .cons{margin-left:5rem}}@media (max-width:1024px){.content{width:75%}.content .discription .prosAndCons .cons{margin-left:5rem}}@media (max-width:768px){.content{width:85%}.pdspec{width:93%}.content .discription .prosAndCons{flex-direction:column}.content .discription .prosAndCons .cons{margin-left:0;margin-top:.8rem}}@media (max-width:661px){.pdspec .spectable,.pdspec h3{width:93%}.imgandspec{flex-direction:column;border:none}.pdimg{justify-content:center;align-items:center;height:100%;width:100%;padding-top:.6rem}.pdimg img{height:180px}.content .discription .prosAndCons h3{margin-left:0}}@media (max-width:540px){.pdname>h2{font-size:1.3rem}.imgandspec{flex-direction:column}.buylinkbutton ul{width:100%}.content .discription{font-size:medium;line-height:1.8;word-spacing:.15rem}.content .discription p{margin-top:.3rem}.content .discription .prosAndCons .cons{margin-top:1rem}}
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+ul,
+li,
+a {
+	list-style: none;
+	text-decoration: none;
+	color: white;
+}
+li {
+	color: black;
+}
+body {
+	color: rgb(5, 5, 5);
+	font-family: "Open Sans", sans-serif;
+	line-height: 1.5;
+	border-top: 3px solid lightseagreen;
+}
+section {
+	margin-top: 0.5rem;
+}
+.content {
+	width: 60%;
+	margin: auto;
+	/* padding-bottom: 2.5rem; */
+	margin-bottom: 2.5rem;
+}
+.content::after {
+	display: block;
+	content: "";
+	border-top: 1px dotted #797979b9;
+	/* border-radius: ; */
+	width: 100%;
+	margin-top: 2.5rem;
+	height: 1px;
+}
+.content .pdname {
+	margin-bottom: 0.6rem;
+	/* font-family: Verdana, sans-serif; */
+	/* border: 1px solid black; */
+	/* color: white; */
+	/* background-color: lightseagreen; */
+	/* width: 50%; */
+}
+
+.imgandspec {
+	box-shadow: #64646f33 0px 7px 29px 0px;
+	border: 0.5px solid lightseagreen;
+	border-radius: 0.5rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	/* border: 1px solid red; */
+}
+
+.pdimg {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+	width: 100%;
+	/* border: 1px solid red; */
+}
+.pdimg img {
+	height: 250px;
+	object-fit: contain;
+	/* border: 1px solid red; */
+}
+.pdspec {
+	width: 100%;
+	height: 300px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	/* border: 1px solid red; */
+}
+.pdspec h3 {
+	padding-left: 0.3rem;
+	/* margin-top: 0.8rem; */
+	width: 95%;
+	font-weight: normal;
+	/* border: 1px solid red; */
+	text-decoration: underline lightseagreen;
+}
+/* .pdspec h3 > span {
+	color: lightseagreen;
+} */
+.pdspec .spectable {
+	height: 80%;
+	width: 95%;
+	/* border: 1px solid red; */
+	/* height: 100%; */
+	border-collapse: collapse;
+	/* border-spacing: 50px; */
+}
+
+td {
+	/* border-bottom: 1px solid pink; */
+	padding: 0 0.3rem 0 0.3rem;
+}
+tr {
+	border-bottom: 0.5px solid lightseagreen;
+}
+tr:last-child {
+	border: none;
+}
+.buylinkbutton {
+	margin-top: 1rem;
+	/* border: 1px solid red; */
+}
+.buylinkbutton h4 {
+	font-weight: normal;
+	margin-bottom: 1rem;
+}
+.buylinkbutton ul {
+	display: flex;
+	width: 50%;
+	height: 2.5rem;
+	/* gap: 4%; */
+	/* justify-content: space-between; */
+	/* border: 1px solid red; */
+}
+.buylinkbutton ul li {
+	width: 30%;
+	/* flex: 1; */
+	/* border: 1px solid red; */
+	margin-left: 1.5rem;
+}
+.buylinkbutton ul li:first-child {
+	margin-left: 0px;
+}
+.buylinkbutton ul li a {
+	display: flex;
+	border-radius: 0.3rem;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 100%;
+	background-color: lightseagreen;
+	box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+	border: 1px solid transparent;
+	transition: all 0.2s ease-in-out;
+}
+.buylinkbutton ul li a:hover {
+	background-color: white;
+	border: 1px solid lightseagreen;
+	color: lightseagreen;
+}
+
+.content .discription {
+	margin-top: 1.5rem;
+	/* height: 500vh; */
+	font-size: medium;
+	line-height: 2.2;
+	word-spacing: 0.15rem;
+	/* line-height: 1.5; */
+}
+.content .discription p {
+	margin-bottom: 2rem;
+	/* margin-top: 0.3rem; */
+	/* border: 1px solid red; */
+}
+.content .discription p > a {
+	color: black;
+	text-decoration: underline;
+}
+.content .discription .prosAndCons {
+	display: flex;
+	/* gap: 10rem; */
+
+	margin-top: 1rem;
+	font-size: medium;
+}
+
+/* .content .discription .prosAndCons h3 {
+	margin-left: 1.3rem;
+margin-left: 1rem;
+	padding-right: 0.5rem;
+	
+} */
+.content .discription .prosAndCons h3::before {
+	content: "\2714";
+	color: inherit;
+	padding-right: 0.5rem;
+}
+.content .discription .prosAndCons .cons h3::before {
+	content: "\2716";
+}
+.content .discription .prosAndCons .prosUl > li::before {
+	content: "\25CF";
+	color: lightseagreen;
+	padding-right: 0.5rem;
+}
+
+.content .discription .prosAndCons .consUl > li::before {
+	content: "\25CF";
+	color: #e76f51;
+	padding-right: 0.5rem;
+}
+
+#myBtn {
+	display: none; /* Hidden by default */
+	position: fixed;
+	bottom: 20px;
+	right: 20px;
+	z-index: 99;
+	border: 1px solid transparent;
+	outline: none;
+	user-select: none;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+	height: 50px;
+	width: 50px;
+	border-radius: 50%;
+	font-size: 18px;
+	box-shadow: #00000059 0px 5px 15px;
+	transition: border 0.2s ease-in-out;
+}
+#myBtn > img {
+	height: 50%;
+	object-fit: contain;
+	pointer-events: none;
+}
+
+#myBtn:hover {
+	border: 1px solid #5f6368;
+}
+@media (min-width: 1024px) {
+	.content .discription .prosAndCons .cons {
+		margin-left: 5rem;
+	}
+}
+@media (max-width: 1024px) {
+	.content {
+		width: 75%;
+	}
+	/* .content .discription .prosAndCons {
+		gap: 1rem;
+	} */
+	.content .discription .prosAndCons .cons {
+		margin-left: 5rem;
+	}
+}
+@media (max-width: 768px) {
+	.content {
+		width: 85%;
+	}
+	.pdspec {
+		width: 93%;
+	}
+	.content .discription .prosAndCons {
+		flex-direction: column;
+	}
+	.content .discription .prosAndCons .cons {
+		margin-left: 0rem;
+		margin-top: 0.8rem;
+	}
+}
+@media (max-width: 661px) {
+	.pdspec h3,
+	.pdspec .spectable {
+		width: 93%;
+	}
+	.imgandspec {
+		flex-direction: column;
+		border: none;
+	}
+	.pdimg {
+		/* justify-content: flex-start; */
+		justify-content: center;
+		align-items: center;
+		height: 100%;
+		width: 100%;
+		/* border: 1px solid red; */
+		padding-top: 0.6rem;
+	}
+	.pdimg img {
+		height: 180px;
+	}
+	.content .discription .prosAndCons h3 {
+		margin-left: 0rem;
+		/* marginleft: 1rem;
+		pad
+		ding-right: 0.5rem; */
+	}
+	/* .content .discription {
+		line-height: 2.2;
+		word-spacing: 0.15rem;
+	} */
+}
+@media (max-width: 540px) {
+	.pdname > h2 {
+		font-size: 1.3rem;
+	}
+
+	.imgandspec {
+		flex-direction: column;
+		/* border: none; */
+		/* border: 1px solid red; */
+	}
+	.buylinkbutton ul {
+		width: 100%;
+	}
+	.content .discription {
+		font-size: medium;
+		line-height: 1.8;
+		word-spacing: 0.15rem;
+		/* line-height: 1.5; */
+	}
+	.content .discription p {
+		margin-top: 0.3rem;
+		/* border: 1px solid red; */
+	}
+	/* .content .discription .prosAndCons h3 {
+		margin-left: 1.3rem;
+	} */
+	.content .discription .prosAndCons .cons {
+		/* border: 1px solid red; */
+		margin-top: 1rem;
+	}
+}
+/* @media (max-width: 320px){
+
+} */
+
