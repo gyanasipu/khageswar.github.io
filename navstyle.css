@@ -1,0 +1,473 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	user-select: none;
+	/* border: 1px solid red; */
+}
+body {
+	font-family: "Open Sans", sans-serif;
+}
+a {
+	text-decoration: none;
+	color: black;
+}
+ul,
+li {
+	list-style: none;
+}
+.navsection {
+	position: fixed;
+	top: 0;
+	width: 100%;
+	/* border: 1px solid red; */
+	/* overflow: hidden; */
+}
+.navbar {
+	display: flex;
+	/* border-top: 1px solid blue; */
+	height: 55px;
+	background-color: white;
+	box-shadow: 0 1px 2px 0 rgb(60 64 67 / 30%), 0 2px 6px 2px rgb(60 64 67 / 15%);
+	transition: border 0.2s ease-in-out;
+	position: relative;
+}
+
+.navbar .hamburger {
+	display: none;
+}
+.navbar .brand-name {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-left: 3rem;
+	/* border: 1px solid red; */
+}
+.navbar .brand-name > a {
+	font-size: 2rem;
+	display: flex;
+	height: 90%;
+	color: blue;
+	justify-content: center;
+	align-items: center; /* width: 100%; */
+	/* border: 1px solid red; */
+}
+.navbar .right-icons {
+	position: absolute;
+	/* same margin like barnd name */
+	right: 3rem;
+	height: 100%;
+	width: 6rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	/* border: 1px solid red; */
+}
+.navbar .right-icons .searchIcon,
+.darkmode {
+	width: 34px;
+	height: 34px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+	border-radius: 50%;
+	transition: transform 0.2s ease-in-out;
+	/* border: 1px solid red; */
+}
+/* .navbar .right-icons .searchIcon > img {
+	width: 24px;
+	border: 1px solid red;
+} */
+.navbar .right-icons .searchIcon:hover {
+	transform: scale(1.2);
+}
+.navbar .right-icons .darkmode:hover {
+	transform: scale(1.2);
+}
+/* .navbar .right-icons .darkmode {
+	background-color: white;
+	box-shadow: 0 1px 2px 0 rgb(60 64 67 / 30%), 0 2px 6px 2px rgb(60 64 67 / 15%);
+} */
+.navbar .searchsection {
+	/* z-index: 11; */
+	background-color: #ffffff;
+	position: absolute;
+	height: 100%;
+	width: 100vw;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	display: none;
+	opacity: 0;
+	/* border: 1px solid red; */
+}
+.navbar.searchActive .searchsection {
+	display: flex;
+	animation: forsearch 0.2s ease-in-out forwards;
+}
+@keyframes forsearch {
+	100% {
+		opacity: 1;
+	}
+}
+.navbar .searchsection input {
+	font-size: 1.2rem;
+	user-select: none;
+	margin-left: 2%;
+	margin-right: 2%;
+	outline: none;
+	height: 70%;
+	width: 70%;
+	border: none;
+	border-radius: 4px;
+	padding-left: 1.5rem;
+	box-shadow: 0 1px 2px 0 rgb(60 64 67 / 30%), 0 2px 6px 2px rgb(60 64 67 / 15%);
+	/* display: none; */
+}
+.navbar .searchsection .searchsection-icon {
+	user-select: none;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 1.85rem;
+	width: 1.85rem;
+	font-size: 1rem;
+	color: #5a5a5a;
+	border-radius: 50%;
+	box-shadow: 0 1px 2px 0 rgb(60 64 67 / 30%), 0 2px 6px 2px rgb(60 64 67 / 15%);
+	/* font-weight: 900; */
+	/* padding: 1rem; */
+	/* border: 1px solid red; */
+}
+
+/* navlinks */
+.navbar .navlins {
+	margin-left: 5rem;
+	/* border: 1px solid black; */
+}
+.close {
+	display: none;
+}
+.navbar .navlins .navLinkHeader {
+	display: none;
+}
+.navbar .navlins .navul {
+	width: 36vw;
+	height: 100%;
+	display: flex;
+	justify-content: space-around;
+	position: relative;
+	/* border: 1px solid red; */
+}
+
+.navbar .navlins .navul .navli {
+	/* flex: 1; */
+	border-bottom: 3px solid transparent;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+	position: relative;
+	padding: 0 0.6rem 0 0.6rem;
+	transition: all 0.2s ease-in-out;
+	/* border: 1px solid red; */
+}
+
+.navbar .navlins .navul .navli:last-child {
+	border: none;
+	background-color: transparent;
+	transition: all 0.2s ease-in-out;
+}
+.navbar .navlins .navul .navli .navicon {
+	height: 100%;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	/* border: 1px solid red; */
+}
+.navbar .navlins .navul .navli .navicon a {
+	text-transform: capitalize;
+	font-size: 1rem;
+	display: flex;
+	font-weight: 400;
+	/* flex: 1; */
+	height: 100%;
+	justify-content: center;
+	align-items: center;
+	/* padding-left: 0.5rem; */
+	border-top: 2px solid transparent;
+	border-bottom: 2px solid transparent;
+	transition: all 0.1s linear;
+}
+.navbar .navlins .navul .navli .dropIcon {
+	margin-left: 0.25rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 18px;
+	width: 18px;
+	background-image: url("images/chevron-down.svg");
+	background-repeat: no-repeat;
+	background-size: contain;
+	opacity: 0.75;
+	transition: transform 0.2s ease-in-out;
+	/* border: 1px solid #727272; */
+	/* border-radius: 50%; */
+	/* box-shadow: ; */
+}
+.navbar .navlins .navul .navli .deepul {
+	position: absolute;
+	top: 108%;
+	left: 0;
+	transform: translateY(-140%);
+	opacity: 0;
+	width: 100%;
+	width: 10rem;
+	transition: opacity 0.3s ease-in-out;
+	background-color: #f0ffffbd;
+	border-radius: 4px; /* height: 8rem; */ /* z-index: -11; */
+	/* border: 1px solid black; */ /* display: none; */
+}
+.navbar .navlins .navul .navli .deepul .deepli {
+	border-bottom: 1px solid #b9b9b9;
+}
+.navbar .navlins .navul .navli .deepul .deepli:last-child {
+	border: none;
+}
+.navbar .navlins .navul .navli .deepul .deepli > a {
+	display: flex;
+	text-transform: capitalize;
+	width: 100%;
+	height: 100%;
+	padding: 0.4rem;
+	padding-left: 0.6rem;
+	justify-content: flex-start;
+	align-items: center;
+	/* border: 1px solid black; */
+}
+.navbar .navlins .navul .navli > a:last-child {
+	padding: 1rem;
+}
+@media screen and (max-width: 1340px) {
+	.navbar .navlins .navul {
+		width: 48vw;
+	}
+}
+@media screen and (min-width: 1025px) {
+	.navbar .navlins .navul .navli:hover > .navicon > a {
+		border-bottom: 2px solid #6969ff;
+	} /* background-color: red; */
+
+	.navbar .navlins .navul .navli:last-child:hover {
+		border: none;
+		background-color: #b2dfdc7e;
+	}
+	.navbar .navlins .navul .navli:hover > .deepul {
+		transform: translateY(0%);
+		background-color: white;
+		opacity: 1;
+	}
+	.navbar .navlins .navul .navli:hover > ul > .dropIcon {
+		/* border: 1px solid red; */
+		transform: rotate(-180deg);
+	}
+}
+@media screen and (max-width: 1025px) {
+	/* body.openNav,
+	body.openNav .navbar {
+		box-shadow: none;
+		background-color: #303030;
+	} */
+	.navbar .hamburger {
+		/* z-index: 11; */
+		position: absolute;
+		display: flex;
+		left: 1;
+		/* margin-left: 0.8rem; */
+		top: 50%;
+		transform: translateY(-50%);
+		width: 48px;
+		height: 48px;
+		border: 1px solid transparent;
+		/* border: 1px solid red; */
+		border-radius: 50%;
+		justify-content: center;
+		align-items: center;
+		cursor: pointer;
+		user-select: none;
+		transition: all 0.2s ease;
+	}
+	.navbar .right-icons {
+		right: 24px;
+	}
+	.navbar .hamburger > svg {
+		width: 25px;
+		height: 25px;
+		fill: #333333;
+		transition: all 0.2s ease;
+		/* border: 1px solid red; */
+	}
+	/* .navbar .hamburger:hover {
+		border: 1px solid gray;
+	} */
+	.navbar .hamburger:hover > svg {
+		fill: black;
+	}
+	.close {
+		z-index: 11;
+		/* border: 1px solid red; */
+		font-size: 1.5rem;
+		font-weight: 800;
+		color: red;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 2rem;
+		height: 2rem;
+		cursor: pointer;
+	}
+
+	.navbar .brand-name {
+		/* border: 1px solid red; */
+		margin-left: 5rem;
+	}
+	.navbar .navlins {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		/* justify-content: baseline; */
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 50vw;
+		height: 100vh;
+		overflow-y: auto;
+		/* border: 1px solid red; */
+		padding: 0;
+		margin: 0;
+		background-color: white;
+		/* border-radius: 0 10px 10px 0; */
+		transform: translateX(-105%);
+		transition: transform 0.2s ease-out;
+		box-shadow: 0 1px 2px 0 rgb(60 64 67 / 30%),
+			0 2px 6px 2px rgb(60 64 67 / 15%);
+	}
+	.navbar .navlins.open {
+		transform: translateX(0%);
+	}
+	.navbar .navlins .navLinkHeader {
+		margin-top: 0.3rem;
+		display: flex;
+		width: 90%;
+		border-radius: 0 10px 0px 0;
+		justify-content: space-between;
+		align-items: center;
+
+		position: relative;
+		/* border: 1px solid red; */
+		height: 3.5rem;
+	}
+	.navbar .navlins .navLinkHeader > a {
+		display: flex;
+		/* justify-content: baseline; */
+		align-items: center;
+		padding: 0 1rem 0 1rem;
+		/* border: 1px solid red; */
+		color: rgb(54, 54, 54);
+		font-size: 1.8rem;
+	}
+
+	.navbar .navlins .navul {
+		margin-top: 3rem;
+		flex-direction: column;
+		height: auto;
+		overflow: auto;
+		width: 90%;
+		/* border: 1px solid red; */
+		align-items: flex-start;
+		justify-content: flex-start;
+		position: relative;
+	}
+	.navbar .navlins .navul .navli {
+		/* flex: 1; */
+		/* flex-wrap: wrap; */
+		flex-direction: column;
+		align-items: flex-start;
+		/* border: 1px solid red; */
+		width: 100%;
+		justify-content: flex-start;
+	}
+	/* for morelink style */
+	.navbar .navlins .navul .navli > a:last-child {
+		margin-top: 1rem;
+		width: auto;
+		/* color: white; */
+		color: blue;
+		/* border-radius: 0.5rem; */
+		padding: 0.5rem;
+	}
+	/* drop icon style */
+	.navbar .navlins .navul .navli .navicon {
+		justify-content: baseline;
+
+		padding: 0.5rem;
+		user-select: none;
+	}
+	/* for preveious last item */
+	/* drop icon style */
+	.navbar .navlins .navul .navli .dropIcon {
+		/* border: 1px solid #727272; */
+		margin-left: 0.5rem;
+		background-color: white;
+		transition: border 0.2s ease-in-out;
+		border-radius: 50%;
+	}
+	.navbar .navlins .navul .navli .deepul {
+		position: relative;
+		position: static;
+		top: 0;
+		/* left: 0; */
+		margin-left: 0.6rem;
+		opacity: 1;
+		transform: translateY(0%);
+		width: 100%;
+		transition: all 0.3s ease-in-out;
+		/* height: 8rem; */
+		border-left: 1px solid #0f0f0f;
+		padding: 0 1.5rem 0 1rem;
+		border-radius: 0px;
+		/* background-color: #dddddda4; */
+		background-color: white;
+		display: none;
+	}
+
+	.navbar .navlins .navul .navli .deepul .deepli {
+		border-bottom: none;
+	}
+	.navbar .navlins .navul .navli .deepul .deepli > a {
+		/* border: 1px solid red; */
+		font-size: 1rem;
+	}
+	.navbar .navlins .navul .navli .deepul.opendeepul {
+		display: block;
+	}
+	/* drop icon rotate */
+	.navbar .navlins .navul .navli .dropIcon.rotate {
+		transform: rotate(-180deg);
+	}
+}
+
+/* #content-footer {
+	margin-top: 70px;
+} */
+@media screen and (max-width: 545px) {
+	.navbar .navlins {
+		width: 65vw;
+	}
+}
+@media screen and (max-width: 415px) {
+	.navbar .navlins {
+		width: 80vw;
+	}
+}
