@@ -340,8 +340,8 @@ body {
 		height: 100vh;
 		background-color: #000000e3;
 		opacity: 0;
-		-webkit-animation: overlayopacity 0.2s ease forwards;
-		        animation: overlayopacity 0.2s ease forwards;
+		-webkit-animation: overlayopacity 0.4s ease forwards;
+		        animation: overlayopacity 0.4s ease forwards;
 	}
 	@-webkit-keyframes overlayopacity {
 		100% {
