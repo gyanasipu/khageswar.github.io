@@ -430,11 +430,11 @@ body {
 		-webkit-transform: translateX(-105%);
 		    -ms-transform: translateX(-105%);
 		        transform: translateX(-105%);
-		-webkit-transition: -webkit-transform 0.2s ease;
-	transition: -webkit-transform 0.2s ease;
-	-o-transition: transform 0.2s ease;
-	transition: transform 0.2s ease;
-	transition: transform 0.2s ease, -webkit-transform 0.2s ease;
+/* 		-webkit-transition: -webkit-transform 0.2s ease; */
+/* 	transition: -webkit-transform 0.2s ease; */
+/* 	-o-transition: transform 0.2s ease; */
+	transition: transform 0.3s linear;
+/* 	transition: transform 0.2s ease, -webkit-transform 0.2s ease; */
 	}
 	.navbar.open .navlins {
 		-webkit-transform: translateX(0);
