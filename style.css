@@ -403,9 +403,9 @@ body {
 	}
 	.navbar .navlins {
 		z-index: 2;
-		display: -webkit-box;
-		display: -ms-flexbox;
-		display: flex;
+		display: none;
+		
+		
 		-webkit-box-orient: vertical;
 		-webkit-box-direction: normal;
 		    -ms-flex-direction: column;
@@ -423,24 +423,23 @@ body {
 		margin: 0;
 		background-color: #fff;
 		border-radius: 0 10px 10px 0;
-		-webkit-box-shadow: 0 1px 2px 0 rgb(60 64 67 / 30%),
-			0 2px 6px 2px rgb(60 64 67 / 15%);
-		        box-shadow: 0 1px 2px 0 rgb(60 64 67 / 30%),
-			0 2px 6px 2px rgb(60 64 67 / 15%);
-		-webkit-transform: translateX(-105%);
+		
+		
+		
+	}
+.navbar.open .navlins {
+Display:flex;
+-webkit-transform: translateX(-105%);
 		    -ms-transform: translateX(-105%);
 		        transform: translateX(-105%);
-		-webkit-transition: -webkit-transform 0.3s ease;
-	transition: -webkit-transform 0.3s ease;
-	-o-transition: transform 0.3s ease;
-	transition: transform 0.3s ease;
-	transition: transform 0.3s ease, -webkit-transform 0.2s ease;
+	animation: navanim 0.2s ease forwards;
+		
 	}
-	.navbar.open .navlins {
-		-webkit-transform: translateX(0);
+@keyframes navanim {
+100%{-webkit-transform: translateX(0);
 		    -ms-transform: translateX(0);
-		        transform: translateX(0);
-	}
+		        transform: translateX(0);}
+}
 	.navbar .navlins .navLinkHeader {
 		margin-top: 0.1rem;
 		display: -webkit-box;
