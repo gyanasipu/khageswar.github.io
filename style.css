@@ -432,7 +432,7 @@ Display:flex;
 -webkit-transform: translateX(-105%);
 		    -ms-transform: translateX(-105%);
 		        transform: translateX(-105%);
-	animation: navanim 0.2s ease forwards;
+	animation: navanim 0.4s ease forwards;
 		
 	}
 @keyframes navanim {
