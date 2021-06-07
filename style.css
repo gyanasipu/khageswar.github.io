@@ -130,11 +130,11 @@ body {
 	top: 0;
 	left: 0;
 	width: 100%;
-	-webkit-transition: -webkit-transform 0.2s ease-in-out;
-	transition: -webkit-transform 0.2s ease-in-out;
-	-o-transition: transform 0.2s ease-in-out;
-	transition: transform 0.2s ease-in-out;
-	transition: transform 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out;
+	-webkit-transition: -webkit-transform 0.2s ease;
+	transition: -webkit-transform 0.2s ease;
+	-o-transition: transform 0.2s ease;
+	transition: transform 0.2s ease;
+	transition: transform 0.2s ease, -webkit-transform 0.2s ease;
 }
 .navbar .overlay {
 	display: none;
@@ -245,11 +245,11 @@ body {
 .navbar .navlins .navul .navli .navicon .iconli .dropIcon {
 	margin-left: 3px;
 	font-size: 1.1rem;
-	-webkit-transition: -webkit-transform 0.2s ease-in-out;
-	transition: -webkit-transform 0.2s ease-in-out;
-	-o-transition: transform 0.2s ease-in-out;
-	transition: transform 0.2s ease-in-out;
-	transition: transform 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out;
+	-webkit-transition: -webkit-transform 0.2s ease;
+	transition: -webkit-transform 0.2s ease;
+	-o-transition: transform 0.2s ease;
+	transition: transform 0.2s ease;
+	transition: transform 0.2s ease, -webkit-transform 0.2s ease;
 }
 .navbar .navlins .navul .navli .deepul {
 	position: absolute;
@@ -340,8 +340,8 @@ body {
 		height: 100vh;
 		background-color: #000000e3;
 		opacity: 0;
-		-webkit-animation: overlayopacity 0.2s ease-out forwards;
-		        animation: overlayopacity 0.2s ease-out forwards;
+		-webkit-animation: overlayopacity 0.2s ease forwards;
+		        animation: overlayopacity 0.2s ease forwards;
 	}
 	@-webkit-keyframes overlayopacity {
 		100% {
@@ -430,11 +430,11 @@ body {
 		-webkit-transform: translateX(-105%);
 		    -ms-transform: translateX(-105%);
 		        transform: translateX(-105%);
-		-webkit-transition: -webkit-transform 0.2s ease-out;
-		transition: -webkit-transform 0.2s ease-out;
-		-o-transition: transform 0.2s ease-out;
-		transition: transform 0.2s ease-out;
-		transition: transform 0.2s ease-out, -webkit-transform 0.2s ease-out;
+		-webkit-transition: -webkit-transform 0.2s ease;
+	transition: -webkit-transform 0.2s ease;
+	-o-transition: transform 0.2s ease;
+	transition: transform 0.2s ease;
+	transition: transform 0.2s ease, -webkit-transform 0.2s ease;
 	}
 	.navbar.open .navlins {
 		-webkit-transform: translateX(0);
@@ -514,9 +514,9 @@ body {
 	.navbar .navlins .navul .navli .dropIcon {
 		margin-left: 0.5rem;
 		background-color: #fff;
-		-webkit-transition: border 0.2s ease-in-out;
-		-o-transition: border 0.2s ease-in-out;
-		transition: border 0.2s ease-in-out;
+		-webkit-transition: all 0.2s ease;
+		-o-transition: all 0.2s ease;
+		transition: all 0.2s ease;
 	}
 	.navbar .navlins .navul .navli .dropIcon.rotate {
 		-webkit-transform: rotate(-180deg);
@@ -529,9 +529,9 @@ body {
 		margin-left: 0.6rem;
 		width: 100%;
 		height: auto;
-		-webkit-transition: all 0.3s ease-in-out;
-		-o-transition: all 0.3s ease-in-out;
-		transition: all 0.3s ease-in-out;
+		-webkit-transition: all 0.2s ease;
+		-o-transition: all 0.2s ease;
+		transition: all 0.2s ease;
 		border: none;
 		border-left: 1px solid #0f0f0f;
 		padding: 0 1.5rem 0 1rem;
@@ -707,9 +707,9 @@ tr:last-child {
 	-webkit-box-shadow: rgba(0, 0, 0, 0.24) 0 3px 8px;
 	        box-shadow: rgba(0, 0, 0, 0.24) 0 3px 8px;
 	border: 1px solid transparent;
-	-webkit-transition: all 0.2s ease-in-out;
-	-o-transition: all 0.2s ease-in-out;
-	transition: all 0.2s ease-in-out;
+	-webkit-transition: all 0.2s ease;
+		-o-transition: all 0.2s ease;
+		transition: all 0.2s ease;
 }
 .buylinkbutton ul li a:hover {
 	background-color: #fff;
