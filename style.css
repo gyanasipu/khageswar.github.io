@@ -136,15 +136,16 @@ body {
 	transition: transform 0.2s ease;
 	transition: transform 0.2s ease, -webkit-transform 0.2s ease;
 }
-.navbar .overlay {opacity: 1;
-	visibility: hidden;
+.navbar .overlay {display:none;
+	background-color:rgba(0,0,0,0);
 	position: fixed;
 		left: 0;
 		top: 0;
 		width: 100vw;
 		height: 100vh;
-		background-color: #000000c5;
-	transition: all 0.15s ease;
+	z-index:199;
+		
+	
 		
 }
 .navbar {
@@ -340,21 +341,12 @@ body {
 		visibility: hidden;
 	}
 	.navbar.open .overlay {
-		visibility: visible;
+		display:block;
+		background-color:rgba(0, 0, 0, 0.5);
 		
-/* 		-webkit-animation: overlayopacity 0.2s ease forwards;
-		        animation: overlayopacity 0.2s ease forwards; */
+
 	}
-/* 	@-webkit-keyframes overlayopacity {
-		100% {
-			opacity: 1;
-		}
-	}
-	@keyframes overlayopacity {
-		100% {
-			opacity: 1;
-		}
-	} */
+
 	.navbar {
 		-webkit-box-pack: center;
 		    -ms-flex-pack: center;
@@ -404,13 +396,13 @@ body {
 		cursor: pointer;
 	}
 	.navbar .navlins {
-		z-index: 2;
+		z-index: 200;
 		display: flex;
 		position: absolute;
 		top: 0;
-		left: 0;
+		left: -100vw;
 		width: 35vw;
-		height: 100vh;overflow-y: auto;
+		height: 100vh;overflow-y: scroll;
 		padding: 0;
 		margin: 0;
 		-webkit-box-orient: vertical;
@@ -423,13 +415,10 @@ body {
 		background-color: #fff;
 		border-radius:0;
 		
-		-webkit-transform: translateX(-105%);
-		    -ms-transform: translateX(-105%);
-		        transform: translateX(-105%);
-	 -webkit-transition: transform 0.35s ease; 
+	 -webkit-transition: all 0.5s ease; 
 	         
-		 -o-transition: transform 0.35s ease; 
-		 transition: transform 0.35s ease; 
+		 -o-transition: all 0.5s ease; 
+		 transition: all 0.5s ease; 
 		
 		
 		
@@ -438,9 +427,9 @@ body {
 		
 	}
 .navbar.open .navlins {
--webkit-transform: translateX(0);
-		    -ms-transform: translateX(0);
-		        transform: translateX(0);}
+-webkit-transform: translateX(100vw);
+		    -ms-transform: translateX(100vw);
+		        transform: translateX(100vw);}
 
 	}
 /* @keyframes navanim {
