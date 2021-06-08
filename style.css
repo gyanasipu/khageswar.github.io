@@ -567,8 +567,12 @@ body {
 }
 @media screen and (max-width: 415px) {
 	.navbar .navlins {
-		width: 80vw;
+		width: 70vw;
 	}
+}
+@media screen and (max-width: 282px)
+.navbar .navlins {
+    width: 80vw;
 }
 #allcontent {
 	margin: 0;
