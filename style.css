@@ -383,6 +383,12 @@ body {
 		-o-transition: all 0.2s ease;
 		transition: all 0.2s ease;
 	}
+	.navbar .hamburger::selection {
+    color:transparent;
+}
+.navbar .hamburger::-moz-selection {
+    color:transparent;
+}
 	.close {
 		display: -webkit-box;
 		display: -ms-flexbox;
@@ -395,6 +401,12 @@ body {
 		height: 2rem;
 		cursor: pointer;
 	}
+	.close::selection {
+    color:transparent;
+}
+.close::-moz-selection {
+    color:transparent;
+}
 	.navbar .navlins {
 		z-index: 200;
 		display: flex;
