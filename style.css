@@ -136,8 +136,16 @@ body {
 	transition: transform 0.2s ease;
 	transition: transform 0.2s ease, -webkit-transform 0.2s ease;
 }
-.navbar .overlay {
-	display: none;
+.navbar .overlay {opacity: 1;
+	visibility: hidden;
+	position: fixed;
+		left: 0;
+		top: 0;
+		width: 100vw;
+		height: 100vh;
+		background-color: #000000c5;
+	transition: all 0.15s ease;
+		
 }
 .navbar {
 	width: 100%;
@@ -332,18 +340,12 @@ body {
 		visibility: hidden;
 	}
 	.navbar.open .overlay {
-		display: block;
-		position: fixed;
-		left: 0;
-		top: 0;
-		width: 100vw;
-		height: 100vh;
-		background-color: #000000e3;
-		opacity: 0;
-		-webkit-animation: overlayopacity 0.2s ease forwards;
-		        animation: overlayopacity 0.2s ease forwards;
+		visibility: visible;
+		
+/* 		-webkit-animation: overlayopacity 0.2s ease forwards;
+		        animation: overlayopacity 0.2s ease forwards; */
 	}
-	@-webkit-keyframes overlayopacity {
+/* 	@-webkit-keyframes overlayopacity {
 		100% {
 			opacity: 1;
 		}
@@ -352,7 +354,7 @@ body {
 		100% {
 			opacity: 1;
 		}
-	}
+	} */
 	.navbar {
 		-webkit-box-pack: center;
 		    -ms-flex-pack: center;
