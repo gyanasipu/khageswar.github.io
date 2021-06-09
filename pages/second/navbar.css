@@ -231,7 +231,7 @@ body {
 		}
 	} */
 	.navbar .navlins .navul .navli:hover .dropIcon {
-		color: #f73859;
+		
 		-webkit-transform: rotate(-180deg);
 		-ms-transform: rotate(-180deg);
 		transform: rotate(-180deg);
@@ -433,7 +433,7 @@ body {
 		transition: all 0.2s ease;
 	}
 	.navbar .navlins .navul .navli .dropIcon.rotate {
-		color: #f73859;
+		
 		-webkit-transform: rotate(-180deg);
 		-ms-transform: rotate(-180deg);
 		transform: rotate(-180deg);
