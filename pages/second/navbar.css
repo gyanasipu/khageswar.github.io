@@ -255,10 +255,10 @@ body {
 		top: 0;
 		width: 100vw;
 		height: 100vh;
-		background-color: rgba(0, 0, 0, 0.6);
+		background-color: rgba(0, 0, 0, 0.5);
 		opacity: 0;
 		-webkit-animation: overlayopacity 0.2s ease forwards;
-		animation: overlayopacity 0.2s ease 0.4s forwards;
+		animation: overlayopacity 0.3s ease 0.4s forwards;
 	}
 	@-webkit-keyframes overlayopacity {
 		100% {
