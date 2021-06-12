@@ -45,15 +45,16 @@ body {
 }
 .navbar .overlay {
 position: fixed;
-		 left: -110vw; 
+		 left: 0; 
 		top: 0;
 		width: 100vw;
 		height: 100vh;
 		background-color: rgba(0, 0, 0, 0.5);
 z-index: 12;
+opacity: 0;
+		display:none;
 		
-		
-transition: all 0.3s ease 0.4s;
+
 	
 }
 .navbar {
@@ -258,13 +259,24 @@ transition: all 0.3s ease 0.4s;
 		background-color: #e2e2e2de;
 	}
 	.navbar.open .overlay {
--webkit-transform: translateX(110vw);
-		-ms-transform: translateX(110vw);
-		transform: translateX(110vw);
-		
-		
-		
+                   display:block;
+                 -webkit-animation: overlayopacity 0.2s ease 0.4s forwards;
+		  animation: overlayopacity 0.2s ease 0.4s forwards;
 	}
+@-webkit-keyframes overlayopacity {
+		100% {
+			opacity: 1;
+		}
+	}
+@keyframes overlayopacity {
+		100% {
+			opacity: 1;
+		}
+	}
+		
+		
+		
+	
 	
 	.navbar {
 		-webkit-box-pack: center;
