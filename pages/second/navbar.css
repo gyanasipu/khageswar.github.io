@@ -51,7 +51,9 @@ position: fixed;
 		height: 100vh;
 		background-color: rgba(0, 0, 0, 0.5);
 z-index: 12;
-opacity: 0;
+opacity: 1;
+transform:scale(0);
+transform-origin:right;
 		display:none;
 		
 
@@ -260,17 +262,17 @@ opacity: 0;
 	}
 	.navbar.open .overlay {
                    display:block;
-                 -webkit-animation: overlayopacity 0.2s ease 0.4s forwards;
-		  animation: overlayopacity 0.2s ease 0.4s forwards;
+                 -webkit-animation: overlayopacity 0.3s ease 0.4s forwards;
+		  animation: overlayopacity 0.3s ease 0.4s forwards;
 	}
 @-webkit-keyframes overlayopacity {
 		100% {
-			opacity: 1;
+			transform:scale(1)
 		}
 	}
 @keyframes overlayopacity {
 		100% {
-			opacity: 1;
+			transform:scale(1)
 		}
 	}
 		
