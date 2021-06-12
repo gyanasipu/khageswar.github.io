@@ -258,7 +258,7 @@ body {
 		background-color: rgba(0, 0, 0, 0.6);
 		opacity: 0;
 		-webkit-animation: overlayopacity 0.2s ease forwards;
-		animation: overlayopacity 0.2s ease forwards;
+		animation: overlayopacity 0.2s ease 0.4s forwards;
 	}
 	@-webkit-keyframes overlayopacity {
 		100% {
