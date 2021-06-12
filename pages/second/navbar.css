@@ -45,7 +45,7 @@ body {
 }
 .navbar .overlay {
 position: fixed;
-		/* left: 105%; */
+		 left: 110vw; 
 		top: 0;
 		width: 100vw;
 		height: 100vh;
@@ -53,9 +53,8 @@ position: fixed;
 z-index: 12;
 		
 		
-transform:scaleX(0):
-transform-origin:left;
-	display: none;
+transition: all 0.4s ease;
+	
 }
 .navbar {
 	position: relative;
@@ -259,22 +258,14 @@ transform-origin:left;
 		background-color: #e2e2e2de;
 	}
 	.navbar.open .overlay {
-display: block;
+-webkit-transform: translateX(110vw);
+		-ms-transform: translateX(110vw);
+		transform: translateX(110vw);
 		
 		
-		-webkit-animation: overlayopacity 0.3s ease 0.1s forwards;
-		animation: overlayopacity 0.3s ease 0.1s forwards;
+		
 	}
-	@-webkit-keyframes overlayopacity {
-		100% {
-			transform:scaleX(1)
-		}
-	}
-	@keyframes overlayopacity {
-		100% {
-			transform:scaleX(1)
-		}
-	}
+	
 	.navbar {
 		-webkit-box-pack: center;
 		-ms-flex-pack: center;
@@ -342,7 +333,7 @@ display: block;
 		align-items: center;
 		position: absolute;
 		top: 0;
-		left: -350px;
+		left: -110vw;
 		width: 35vw;
 		height: 100vh;
 		overflow-y: auto;
@@ -353,9 +344,9 @@ display: block;
 		transition: all 0.4s ease;
 	}
 	.navbar.open .navlins {
-		-webkit-transform: translateX(350px);
-		-ms-transform: translateX(350px);
-		transform: translateX(350px);
+		-webkit-transform: translateX(110vw);
+		-ms-transform: translateX(110vw);
+		transform: translateX(110vw);
 	}
 	.navbar .navlins .navLinkHeader {
 		margin-top: 0.1rem;
