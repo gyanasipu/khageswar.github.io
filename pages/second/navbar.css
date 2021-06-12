@@ -45,7 +45,7 @@ body {
 }
 .navbar .overlay {
 position: fixed;
-		 left: 110vw; 
+		 left: -110vw; 
 		top: 0;
 		width: 100vw;
 		height: 100vh;
