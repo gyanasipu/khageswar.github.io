@@ -53,7 +53,7 @@ position: fixed;
 z-index: 12;
 		
 		
-transition: all 0.4s ease;
+transition: all 0.3s ease 0.4s;
 	
 }
 .navbar {
