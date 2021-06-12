@@ -44,6 +44,17 @@ body {
 	transition: transform 0.2s ease, -webkit-transform 0.2s ease;
 }
 .navbar .overlay {
+position: fixed;
+		/* left: 105%; */
+		top: 0;
+		width: 100vw;
+		height: 100vh;
+		background-color: rgba(0, 0, 0, 0.5);
+z-index: 12;
+		
+		
+transform:scaleX(0):
+transform-origin:left;
 	display: none;
 }
 .navbar {
@@ -248,26 +259,20 @@ body {
 		background-color: #e2e2e2de;
 	}
 	.navbar.open .overlay {
-		z-index: 12;
-		display: block;
-		position: fixed;
-		/* left: 105%; */
-		top: 0;
-		width: 100vw;
-		height: 100vh;
-		background-color: rgba(0, 0, 0, 0.5);
-		opacity: 0;
-		-webkit-animation: overlayopacity 0.2s ease forwards;
-		animation: overlayopacity 0.3s ease 0.4s forwards;
+display: block;
+		
+		
+		-webkit-animation: overlayopacity 0.3s ease 0.1s forwards;
+		animation: overlayopacity 0.3s ease 0.1s forwards;
 	}
 	@-webkit-keyframes overlayopacity {
 		100% {
-			opacity: 1;
+			transform:scaleX(1)
 		}
 	}
 	@keyframes overlayopacity {
 		100% {
-			opacity: 1;
+			transform:scaleX(1)
 		}
 	}
 	.navbar {
@@ -501,6 +506,6 @@ body {
 }
 @media screen and (max-width: 415px) {
 	.navbar .navlins {
-		width: 80vw;
+		width: 70vw;
 	}
 }
