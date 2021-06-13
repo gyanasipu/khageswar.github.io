@@ -2,7 +2,7 @@
 	margin: 0;
 	padding: 0;
 	-webkit-box-sizing: border-box;
-	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+	-webkit-tap-highlight-color: transparent;
 	box-sizing: border-box;
 }
 body {
@@ -24,7 +24,6 @@ body {
 }
 .navsection {
 	position: fixed;
-
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
@@ -44,22 +43,15 @@ body {
 	transition: transform 0.2s ease, -webkit-transform 0.2s ease;
 }
 .navbar .overlay {
-position: fixed;
-
+	position: fixed;
 	z-index: 12;
 	top: 0;
-	width: 0;
-	height: 0;
+	left: 0;
 	background: rgba(0, 0, 0, 0.25);
-	/* display: none; */
-opacity: 0;
-transition: opacity 0.35s ease 0.4s;
-/* 	cubic-bezier(0.25, 0.46, 0.45, 0.94) */
-/*for transition 	 */
-	will-change: opacity;
-		
-
-	
+	opacity: 0;
+	width: 100vw;
+	height: 100vh;
+	display: none;
 }
 .navbar {
 	position: relative;
@@ -109,11 +101,10 @@ transition: opacity 0.35s ease 0.4s;
 	-ms-flex-align: center;
 	align-items: center;
 }
-.close,
-.border-bar {
+.border-bar,
+.close {
 	display: none;
 }
-
 .navbar .navlins .navLinkHeader {
 	display: none;
 }
@@ -141,6 +132,28 @@ transition: opacity 0.35s ease 0.4s;
 	-ms-flex-align: center;
 	align-items: center;
 	transition: all 0.2s ease;
+	border: 2px solid transparent;
+}
+.navbar .navlins .navul .navli:before {
+	position: absolute;
+	content: "";
+	bottom: 2%;
+	left: 50%;
+	background-color: #499aff;
+	width: 80%;
+	height: 1.5px;
+	border-radius: 1.5px;
+	-webkit-transform: translateX(-50%) scaleX(0);
+	-ms-transform: translateX(-50%) scaleX(0);
+	transform: translateX(-50%) scaleX(0);
+	-webkit-transform-origin: center;
+	-ms-transform-origin: center;
+	transform-origin: center;
+	-webkit-transition: -webkit-transform 0.3s ease;
+	transition: -webkit-transform 0.3s ease;
+	-o-transition: transform 0.3s ease;
+	transition: transform 0.3s ease;
+	transition: transform 0.3s ease, -webkit-transform 0.3s ease;
 }
 .navbar .navlins .navul .navli .navicon {
 	border-bottom: 2px solid transparent;
@@ -172,28 +185,30 @@ transition: opacity 0.35s ease 0.4s;
 }
 .navbar .navlins .navul .navli .navicon .iconli .dropIcon {
 	margin-left: 3px;
-	/* font-size: 1.1rem; */
-
+	-webkit-transition: all 0.2s ease;
+	-o-transition: all 0.2s ease;
 	transition: all 0.2s ease;
 }
 .navbar .navlins .navul .navli .deepul {
 	position: absolute;
-	top: 102%;
+	top: 105%;
 	left: 0;
 	width: 100%;
 	width: 10rem;
-
-	background-color: #fff;
+	background-color: #f1f1f1;
 	border-radius: 4px;
 	-webkit-box-shadow: #64646f33 0 7px 29px 0;
 	box-shadow: #64646f33 0 7px 29px 0;
 	-webkit-box-shadow: 0 1px 2px 0 rgb(60 64 67 / 30%),
 		0 2px 6px 2px rgb(60 64 67 / 15%);
 	box-shadow: 0 1px 2px 0 rgb(60 64 67 / 30%), 0 2px 6px 2px rgb(60 64 67 / 15%);
-	/* display: none; */
-	transform: scaleY(0);
+	display: none;
+	-webkit-transform: scale(0.9);
+	-ms-transform: scale(0.9);
+	transform: scale(0.9);
+	-webkit-transform-origin: top;
+	-ms-transform-origin: top;
 	transform-origin: top;
-	transition: transform 0.2s ease;
 }
 .navbar .navlins .navul .navli .deepul .deepli {
 	border-bottom: 1px solid #d1d9d9;
@@ -222,31 +237,29 @@ transition: opacity 0.35s ease 0.4s;
 	}
 }
 @media screen and (min-width: 1025px) {
-	.navbar .navlins .navul .navli:hover > .navicon {
-		border-bottom: 2px solid #f73859;
-	}
-	.navbar .navlins .navul .navli .deepul .deepli:hover {
-		background-color: #edf1f0;
-	}
-	.navbar .navlins .navul .navli:last-child:hover {
-		background-color: #dfeeea;
-		color: #fff;
-	}
 	.navbar .navlins .navul .navli:hover .navicon + .deepul {
-		transform: scaleY(1);
+		display: block;
+		-webkit-animation: scaling 0.3s ease forwards;
+		animation: scaling 0.3s ease forwards;
 	}
-	/* @-webkit-keyframes opacity {
+	.navbar .navlins .navul .navli:hover:before {
+		-webkit-transform: translateX(-50%) scaleX(1);
+		-ms-transform: translateX(-50%) scaleX(1);
+		transform: translateX(-50%) scaleX(1);
+	}
+	@-webkit-keyframes scaling {
 		100% {
-			opacity: 1;
+			-webkit-transform: scale(1);
+			transform: scale(1);
 		}
-	} */
-	/* @keyframes opacity {
+	}
+	@keyframes scaling {
 		100% {
-			transform: scaleY(1);
+			-webkit-transform: scale(1);
+			transform: scale(1);
 		}
-	} */
+	}
 	.navbar .navlins .navul .navli:hover .dropIcon {
-		
 		-webkit-transform: rotate(-180deg);
 		-ms-transform: rotate(-180deg);
 		transform: rotate(-180deg);
@@ -263,17 +276,20 @@ transition: opacity 0.35s ease 0.4s;
 		background-color: #e2e2e2de;
 	}
 	.navbar.open .overlay {
-                  left: 0;
-		width: 100vw;
-		height: 100vh;
-		opacity: 1;
+		display: block;
+		-webkit-animation: opacitykey 0.3s ease 0.4s forwards;
+		        animation: opacitykey 0.3s ease 0.4s forwards;
 	}
-
-		
-		
-		
-	
-	
+	@-webkit-keyframes opacitykey {
+		100% {
+			opacity: 1;
+		}
+	}
+	@keyframes opacitykey {
+		100% {
+			opacity: 1;
+		}
+	}
 	.navbar {
 		-webkit-box-pack: center;
 		-ms-flex-pack: center;
@@ -314,7 +330,11 @@ transition: opacity 0.35s ease 0.4s;
 		display: -webkit-box;
 		display: -ms-flexbox;
 		display: flex;
+		-webkit-box-pack: center;
+		-ms-flex-pack: center;
 		justify-content: center;
+		-webkit-box-align: center;
+		-ms-flex-align: center;
 		align-items: center;
 		font-size: 3rem;
 		background-repeat: no-repeat;
@@ -323,7 +343,6 @@ transition: opacity 0.35s ease 0.4s;
 		width: 2rem;
 		height: 2rem;
 		cursor: pointer;
-		/* border: 1px solid #f73859; */
 		color: #f73859;
 	}
 	.navbar .navlins {
@@ -331,7 +350,6 @@ transition: opacity 0.35s ease 0.4s;
 		display: -webkit-box;
 		display: -ms-flexbox;
 		display: flex;
-
 		-webkit-box-orient: vertical;
 		-webkit-box-direction: normal;
 		-ms-flex-direction: column;
@@ -339,16 +357,17 @@ transition: opacity 0.35s ease 0.4s;
 		-webkit-box-align: center;
 		-ms-flex-align: center;
 		align-items: center;
-		position: absolute;
+		position: fixed;
 		top: 0;
 		left: -110vw;
 		width: 35vw;
-		height: 100vh;
+		height: 110vh;
 		overflow-y: auto;
 		padding: 0;
 		margin: 0;
 		background-color: #fff;
-
+		-webkit-transition: all 0.4s ease;
+		-o-transition: all 0.4s ease;
 		transition: all 0.4s ease;
 	}
 	.navbar.open .navlins {
@@ -370,7 +389,6 @@ transition: opacity 0.35s ease 0.4s;
 		align-items: center;
 		position: relative;
 		height: 3.5rem;
-		/* border: 1px solid #f73859; */
 	}
 	.navbar .navlins .navLinkHeader > a {
 		display: -webkit-box;
@@ -381,9 +399,7 @@ transition: opacity 0.35s ease 0.4s;
 		align-items: center;
 		padding: 0 1rem 0 1rem;
 		color: #363636;
-		/* color: green; */
 		font-size: 1.8rem;
-		/* border: 1px solid #f73859; */
 	}
 	.navbar .navlins .navul {
 		margin-top: 3rem;
@@ -437,50 +453,68 @@ transition: opacity 0.35s ease 0.4s;
 		transition: all 0.2s ease;
 	}
 	.navbar .navlins .navul .navli .dropIcon.rotate {
-		
 		-webkit-transform: rotate(-180deg);
 		-ms-transform: rotate(-180deg);
 		transform: rotate(-180deg);
 	}
 	.navbar .navlins .navul .navli .deepul {
 		display: none;
-
 		position: static;
 		margin-left: 0.6rem;
 		width: 100%;
 		height: auto;
-		/* -webkit-transition: all 0.3s ease; */
-
-		/* -o-transition: all 0.3s ease; */
-		/* transition: all 0.3s ease; */
 		border: none;
 		border-left: 1px solid #f73859;
 		padding: 0 1.5rem 0 1rem;
-
 		border-radius: 0;
 		background-color: #fff;
 		-webkit-box-shadow: none;
 		box-shadow: none;
-		/* border: 1px solid #f73859; */
+	}
+	@-webkit-keyframes test2 {
+		0% {
+			opacity: 1;
+			-webkit-transform: scaleY(1);
+			transform: scaleY(1);
+		}
+		100% {
+			-webkit-transform: scaleY(0);
+			transform: scaleY(0);
+		}
 	}
 	@keyframes test2 {
 		0% {
 			opacity: 1;
+			-webkit-transform: scaleY(1);
 			transform: scaleY(1);
 		}
 		100% {
+			-webkit-transform: scaleY(0);
 			transform: scaleY(0);
 		}
 	}
 	.navbar .navlins .navul .navli .deepul.opendeepul {
 		display: block;
+		-webkit-transform: scaleY(0);
+		-ms-transform: scaleY(0);
 		transform: scaleY(0);
+		-webkit-transform-origin: top;
+		-ms-transform-origin: top;
 		transform-origin: top;
+		-webkit-animation: test 0.2s ease forwards;
 		animation: test 0.2s ease forwards;
+	}
+	@-webkit-keyframes test {
+		100% {
+			opacity: 1;
+			-webkit-transform: scaleY(1);
+			transform: scaleY(1);
+		}
 	}
 	@keyframes test {
 		100% {
 			opacity: 1;
+			-webkit-transform: scaleY(1);
 			transform: scaleY(1);
 		}
 	}
