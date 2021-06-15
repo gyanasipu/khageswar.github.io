@@ -138,14 +138,17 @@ body {
 	transition: transform 0.2s ease;
 	transition: transform 0.2s ease, -webkit-transform 0.2s ease;
 }
-.navbar .overlay {display:none;
-	background-color:rgba(0,0,0,0);
+.navbar .overlay {
+	background-color:rgba(0,0,0,0.4);
 	position: fixed;
 		left: 0;
 		top: 0;
 		width: 100vw;
 		height: 100vh;
 	z-index:199;
+	display:none;
+	opacity:0;
+	transition:opacity 0.35s ease;
 		
 	
 		
@@ -344,7 +347,7 @@ body {
 	}
 	.navbar.open .overlay {
 		display:block;
-		background-color:rgba(0, 0, 0, 0.5);
+		opacity:1;
 		
 
 	}
