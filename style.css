@@ -139,17 +139,18 @@ body {
 	transition: transform 0.2s ease, -webkit-transform 0.2s ease;
 }
 .navbar .overlay {
-	
-	background-color: rgba(0, 0, 0, 0.4);
 	position: fixed;
+	display: block;
+	background-color: rgba(0, 0, 0, 0.4);
 	left: 0;
 	top: 0;
 	width: 0;
 	height: 0;
 	z-index: 199;
 	opacity: 0;
-	transition: opacity 0.35s ease;
+	transition: opacity 0.25s ease 0.1s;
 		
+	
 }
 .navbar {
 	width: 100%;
@@ -188,6 +189,7 @@ body {
 	display: flex;
 	height: 90%;
 	color: #3d3d3d;
+	font-weight: bold;
 	-webkit-box-pack: center;
 	    -ms-flex-pack: center;
 	        justify-content: center;
@@ -470,6 +472,7 @@ body {
 		display: -webkit-box;
 		display: -ms-flexbox;
 		display: flex;
+		font-weight: bold;
 		-webkit-box-align: center;
 		    -ms-flex-align: center;
 		        align-items: center;
