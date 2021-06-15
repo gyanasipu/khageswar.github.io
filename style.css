@@ -148,7 +148,7 @@ body {
 	height: 0;
 	z-index: 199;
 	opacity: 0;
-	transition: opacity 0.25s ease 0.1s;
+	transition: opacity 0.2s ease 0.35s;
 		
 	
 }
